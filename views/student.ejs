@@ -1,0 +1,95 @@
+<%- include('includes/header.ejs') %>
+<div class="container tm-mt-big tm-mb-big">
+  <div class="row">
+    <div class="col-xl-9 col-lg-10 col-md-12 col-sm-12 mx-auto">
+      <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="tm-block-title d-inline-block">Student ID Card</h2>
+          </div>
+        </div>
+        <div class="row tm-edit-product-row">
+          <div class="col-xl-6 col-lg-6 col-md-12">
+            
+                <div class="front">
+                    <div class="inner">
+                        <div class="inner1">
+                            <header>
+                                <div class="row mt-2">
+                                    <div class="col-md-4">
+                                        <img src="/images/bhu_logo.png" height="100" width="100" alt="">
+                                    </div>
+                                    <div class="col-md-6 mt-5">
+                                            <strong class="text-white text-center">Bingham University</strong>
+                                            <strong class="text-white text-center"> Nassarawa State</strong>
+                                            <h5></h5>
+                                    </div>
+                                </div>
+                                <div class="info">
+                                 <small style="margin-left: 5px; color:rgb(75, 32, 24);">P.M.B 005, KM 26 Abuja-Keffi Expressway Kodope, Karu</small class="text-center">
+                                 <h4 class="text-center text-danger">Student ID</h4>
+                                </div>
+                                <div class="des">
+                                    <div class="row">
+                                        <div class="col-md-6 mx-1">
+                                            <span style="color:rgb(75, 32, 24);">Name: <h6 class="text-white"><%= student.firstName %> <%= student.secondName %></h6></span>
+                                            <span style="color:rgb(75, 32, 24);">Level: <h6 class="text-white"><%= student.level %>00</h6></span>
+                                            <span style="color:rgb(75, 32, 24);">Matric Number: <h6 class="text-white"><%= student.matric %></h6></span>
+                                            <span style="color:rgb(75, 32, 24);">Expiry Date: <h6 class="text-white"><%= student.Expiry %>00</h6></span>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <img src="/<%= student.image %>" alt="<%= student.firstName %>" style="height: 98%; width: 100%; border: 5px solid rgb(132, 0, 255); border-radius: 10px;">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                            </header>
+                        </div>
+                    </div>
+                </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
+            <div class="back">
+                <div class="inner">
+                    <div class="inner1">
+                        <p class="mt-1 text-danger">Bingham University</p>
+                        <p class="mx-1 text-center text-white">This ID must be in the owner's possession a all times.
+                            Any alterations or erasure renders this card invalid</p>
+                        <img src="/<%= student.barcode %>" style="height: 60%; width: 70%;" alt="">
+                        <p class="text-white">Scan for More Detail</p>
+                    </div>
+                </div>
+            </div>
+            
+          </div>
+          
+       
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="tm-footer row tm-mt-small">
+    <div class="col-12 font-weight-light">
+      <p class="text-center text-white mb-0 px-4 small">
+        Copyright &copy; <b>2018</b> All rights reserved. 
+        
+        Design: <a rel="nofollow noopener" href="https://templatemo.com" class="tm-footer-link">Template Mo</a>
+    </p>
+    </div>
+</footer> 
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<!-- https://jquery.com/download/ -->
+<script src="jquery-ui-datepicker/jquery-ui.min.js"></script>
+<!-- https://jqueryui.com/download/ -->
+<script src="js/bootstrap.min.js"></script>
+<!-- https://getbootstrap.com/ -->
+<script>
+  $(function() {
+    $("#expire_date").datepicker();
+  });
+</script>
+</body>
+</html>
