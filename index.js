@@ -19,7 +19,7 @@ app.set('views', 'views');
 
 app.use('/images', express.static(path.join(__dirname, 'images')));
 const MONGODB_URI =
-  'mongodb+srv://simon:simon@cluster0.xefoe.mongodb.net/barcode';
+  'mongodb+srv://user:password@cluster0.xefoe.mongodb.net/barcode';
 
 const store = new MongoDBStore({
   uri: MONGODB_URI,
@@ -41,7 +41,7 @@ app.use(studentRoute);
 app.use(authRoute);
 
 mongoose
-  .connect('mongodb+srv://simon:simon@cluster0.xefoe.mongodb.net/barcode')
+  .connect('mongodb+srv://user:password@cluster0.xefoe.mongodb.net/barcode')
   .then((result) => {
     app.listen(process.env.PORT || 3000, () => {
       console.log('app is listen at 3000');
